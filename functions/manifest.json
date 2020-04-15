@@ -1,0 +1,14 @@
+{
+  "name": "PWA - Tiempo",
+  "short_name": "PWA Tiempo",
+  "icons": [{
+      "src": "../images/umbrella.png",
+      "sizes": "512x512",
+      "type": "image/png"
+}],
+  "start_url": "../index.html?homescreen=1",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#03a9f4",
+  "theme_color": "#03a9f4"
+}

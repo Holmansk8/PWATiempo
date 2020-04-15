@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PWA | Tiempo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#40C4FF" />
+
+    <link rel="manifest" href="functions/manifest.json">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.min.css">
+    <link href="images/umbrella.ico" rel="icon" sizes="192x192">
+    <link rel="shortcut icon" href="images/umbrella.ico">
+    <link rel="apple-touch-icon" href="images/umbrella.ico">
+</head>
+
+<body>
+    <!-- data-input-page -->
+    <div class="input-page-wrapper">
+        <img src="images/umbrella.png" alt="all-logo" class="app-logo">
+        <h1 class="app-title">PWA Tiempo</h1>
+        <div class="input-data-wrapper">
+            <lable for="city-search-input" class="input-title">Ingresar ubicación</lable>
+            <input id="city-search-input" class="search" placeholder="Buscar por ciudad o país" type="text">
+            <br>
+            <div class="btn-wrapper">
+                <button class="sub-btn" type="button">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                    </svg>
+                    <span class="btn-title">ENVIAR</span>
+                </button>
+
+                <button class="find-location" style="float:right;">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                    </svg>
+                    <span class="btn-title">ENCUENTRAME</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-bar" style="display:none">
+        <svg class="back-btn" style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#000000" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+        </svg>
+        <h1 class="city-name">Nombre de la ciudad</h1>
+        <svg class="menu-btn" style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#000000" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+        </svg>
+    </div>
+
+    <!-- weatherData -->
+    <div class="weather-data-wrapper" style="display:none"></div>
+</body>
+
+<!-- scripts -->
+<script src="functions/jquery.min.js"></script>
+<script src="functions/index.js"></script>
+
+<!-- service worker -->
+<script src="service-worker.js"></script>
+
+</html>
